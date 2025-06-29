@@ -6,11 +6,11 @@ class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField()
 
-    def validate(self, data):
-        user = authenticate(**data)
-        if user and user.is_staff:
-            return user
-        raise serializers.ValidationError("Invalid credentials or not staff")
+    # def validate(self, data):
+    #     user = authenticate(**data)
+    #     if user and user.is_staff:
+    #         return user
+    #     raise serializers.ValidationError("Invalid credentials or not staff")
 
 class UploadedFileSerializer(serializers.ModelSerializer):
     class Meta:
