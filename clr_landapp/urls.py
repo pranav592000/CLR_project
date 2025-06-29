@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (
     LoginAPIView, FileUploadView, DataView,
-    DataDetailView, PrinterConfigView
+    DataDetailView, PrinterConfigView, LogoutAPIView
 )
 
 urlpatterns = [
@@ -10,4 +10,6 @@ urlpatterns = [
     path('data/', DataView.as_view()),
     path('data/<int:row_id>/', DataDetailView.as_view()),
     path('printer-config/', PrinterConfigView.as_view()),
+    path('auth/logout/', LogoutAPIView.as_view(), name='logout'),
+
 ]

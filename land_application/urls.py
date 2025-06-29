@@ -19,6 +19,5 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),                       # Django admin
-    path('api/', include('clr_landapp.urls')),             # Your app's API routes
-    path('api/auth/login/', obtain_auth_token),            # Token-based login
+    path('api/', include('clr_landapp.urls')),             # Your app's API routes
 ]
